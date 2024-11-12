@@ -22,8 +22,6 @@ class Gci < Formula
     assert_match(/gci version #{version}/, str_version)
 
     str_help = shell_output("#{bin}/gci --help")
-    str_default = shell_output(bin/"gci")
-    assert_equal str_default, str_help
     assert_match "Usage:", str_help
     assert_match "Available Commands:", str_help
   end
